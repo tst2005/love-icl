@@ -142,8 +142,8 @@ function icl:load(keyAc, keyTxt, name, ver)
 
 	-- Lines
 	lines[1] = "Welcome to "..name.." v."..ver
-	lines[2] = "Enter <help()> to get the list of commands."
-	lines[3] = self.seperator
+	-- lines[2] = "Enter <help()> to get the list of commands."
+	lines[2] = self.seperator
 end
 
 function icl:keypressed(key)
