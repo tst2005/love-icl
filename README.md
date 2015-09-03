@@ -66,6 +66,21 @@ The first parameter of `icl:load()` is the key you can press to activate the con
 These 2 values are essential for this lib. If these 2 variables are not a string or not listed in the Löve2D key constants list(https://love2d.org/wiki/KeyConstant), `ICL` will not work.
 
 The "name" and the "version" parameters, on the other hand, are not essential to run this library.
+
+Now it's time to mess around!! You can type any type of lua code in this prompt. Don't worry the errors you cause, won't affect the main software. It's protected!
+
+You can try code like:
+
+```lua
+player.damage = 1000000000000000000
+```
+
+or use it for debugging
+
+```lua
+icl:print(player.x)
+```
+
 If you have any other questions, please contract me through `sosolol261@gmail.com`. I will gladly answer your question.
 
 # Licence
