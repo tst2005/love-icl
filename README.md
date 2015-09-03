@@ -48,18 +48,11 @@ end
 
 List of other functions:
 	
-	NOTE: none of these work right now. I have no idea why. Except of icl:print().
+	Not really a list but..
 	
 	icl:print(input, mode)
 	> icl:print() will print on the same line if mode ~= nil.
-	
-	help()
-	> Gives you help.
 
-	exit()
-	> Closes this software.
-
-	and so on...
 
 By the way don't type UTF-8 stuff into the command line.
 
