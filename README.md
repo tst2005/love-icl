@@ -48,7 +48,7 @@ end
 
 List of other functions:
 	
-	NOTE: none of these work right now. I have no idea why.
+	NOTE: none of these work right now. I have no idea why. Except of icl:print().
 	
 	icl:print(input, mode)
 	> icl:print() will print on the same line if mode ~= nil.
