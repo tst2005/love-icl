@@ -1,8 +1,15 @@
 # ICL
 An Ingame Commandline Library for your Löve2D program.
+Ingame Commandline for Love2D [ICL] will give you full access to every global variable in your program ingame.
 
-Ingame Commandline for Love2D [ICL]
+Note: This lib is still in development. Even though it is going to be finished soon it can and will be improved. For example       UI and more built in functions.
 
+# Features
+* `ICL` can help you debug your software without much effort.
+* You can print a variable onto the commandline without a debugger. [Using icl:print()]
+* You can make your own function to help you improve your experience with `ICL` easily.
+
+# Setup
 List of functions(main):
 
 	icl:load(keyToActivateCommandLine, keyToStartTyping, name, version)
@@ -54,8 +61,14 @@ List of other functions:
 
 By the way don't type UTF-8 stuff into the command line.
 
+# Usage
+The first parameter of `icl:load()` is the key you can press to activate the console. The second one is the key that allows you to start to type in your commands. If the key is pressed, the well known "text bar" will show up(you'll understand what I mean). 
+These 2 values are essential for this lib. If these 2 variables are not a string or not listed in the Löve2D key constants list(https://love2d.org/wiki/KeyConstant), `ICL` will not work.
 
-LICENCE :
+The "name" and the "version" parameters, on the other hand, are not essential to run this library.
+If you have any other questions, please contract me through `sosolol261@gmail.com`. I will gladly answer your question.
+
+# Licence
 This work is lcensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
 	Attribution
