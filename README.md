@@ -48,11 +48,13 @@ end
 
 List of other functions:
 	
+	NOTE: none of these work right now. I have no idea why.
+	
 	icl:print(input, mode)
 	> icl:print() will print on the same line if mode ~= nil.
 	
 	help()
-	> Gives you help. But it is not working for some reason.
+	> Gives you help.
 
 	exit()
 	> Closes this software.
