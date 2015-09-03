@@ -67,7 +67,7 @@ These 2 values are essential for this lib. If these 2 variables are not a string
 
 The "name" and the "version" parameters, on the other hand, are not essential to run this library.
 
-Now it's time to mess around!! You can type any type of lua code in this prompt. Don't worry the errors you cause, won't affect the main software. It's protected!
+Now it's time to mess around!! You can type any type of lua code in this prompt. Don't worry the errors you cause won't affect the main software. It's protected!
 
 You can try code like:
 
