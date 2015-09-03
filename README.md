@@ -19,6 +19,7 @@ List of functions(main):
 
 Copy the functions into the main.lua file. It should look something like this:
 
+``` lua
 require("icl")
 
 function love.load()
@@ -36,6 +37,7 @@ end
 function love.textinput(t)
 	icl:textinput(t)
 end
+```
 
 List of other functions:
 	
@@ -53,7 +55,7 @@ List of other functions:
 By the way don't type UTF-8 stuff into the command line.
 
 
-LICENCE
+LICENCE :
 This work is lcensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
 
 	Attribution
