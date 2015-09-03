@@ -52,7 +52,7 @@ List of other functions:
 	> icl:print() will print on the same line if mode ~= nil.
 	
 	help()
-	> Gives you help.
+	> Gives you help. But it is not working for some reason.
 
 	exit()
 	> Closes this software.
