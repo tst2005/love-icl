@@ -1,5 +1,4 @@
 --[[
-
 Ingame Commandline for Love2D [ICL]
 
 List of functions(main):
@@ -65,46 +64,52 @@ This work is lcensed under the Creative Commons Attribution-ShareAlike 4.0 Inter
 icl = {}
 local lines = {}
 
--- commands
+-- locals
 
-function icl:print(input, mode)
-	if input ~= nil then
-		if mode == nil then
-			lines[#lines + 1] = input
+local function execute(input)
+	if input ~= "" then
+		-- Check if input() has an error. If input() has no error then exeute input() else print error message.
+		if string.find(input, "/") == 1 then
+			input = "icl:"..string.gsub(input, "/", "").."()"
+		end
+		
+		local status, err = pcall(loadstring(input))
+		
+		if status then
+			-- execute
 		else
-			lines[#lines] = lines[#lines].." : "..input
+			icl:print(err, 1)
 		end
 	end
 end
 
-local function help()
+-- commands
+
+function icl:help()
 	icl:print("icl:print() : Outputs <input> on the commandline.")
-	icl:print("exit() : CWoses this software.")
+	icl:print("exit() : Closes this software.")
 end
 
-local function exit()
+function icl:exit()
 	love.event.quit()
 end
 
-local function iclFull()
+function icl:full()
 	icl.w = love.window.getWidth()
 	icl.h = love.window.getHeight()
 end
 
-local function iclReset()
+function icl:reset()
 	icl.w = 750
 	icl.h = 247
 end
 
--- locals
-
-local function execute(input)
-	if input ~= nil then
-		input = loadstring(input)
-		if pcall(input) then
-			-- execute
+function icl:print(input, mode)
+	if input ~= "" then
+		if mode == nil then
+			lines[#lines + 1] = input
 		else
-			icl:print("This code has an invalid syntax or returns nil.", 1)
+			lines[#lines] = lines[#lines].." : "..input
 		end
 	end
 end
@@ -119,8 +124,11 @@ function icl:load(keyAc, keyTxt, name, ver)
 	if name == nil then
 		name = "My Game"
 	end
-	if type(keyAc) ~= "string" or type(keyTxt) ~= "string" then
-		error("Expected string in parameter #1 or #2 [ icl:load() ].")
+	if type(keyAc) ~= "string" then
+		error("Expected string value in parameter #1. Got "..type(keyAc).."." , 2)
+	end
+	if type(keyTxt) ~= "string" then
+		error("Expected string value in parameter #2. Got "..type(keyTxt)..".", 2)
 	end
 
 	-- Variables
@@ -142,8 +150,8 @@ function icl:load(keyAc, keyTxt, name, ver)
 
 	-- Lines
 	lines[1] = "Welcome to "..name.." v."..ver
-	-- lines[2] = "Enter <help()> to get the list of commands."
-	lines[2] = self.seperator
+	lines[2] = "Enter \"/help\" to get the list of commands."
+	lines[3] = self.seperator
 end
 
 function icl:keypressed(key)
@@ -199,4 +207,3 @@ function icl:draw()
 		end
 	end
 end
-
