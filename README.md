@@ -83,6 +83,8 @@ The list of pre-built functions:
 > full() : Changes console size to window size.
 > reset() : Resets size.
 
+CAUTION: Don't declare functions with the identical names as the ones above.
+
 If you have any other questions, please contract me through `sosolol261@gmail.com`. I will gladly answer your question.
 
 # Licence
