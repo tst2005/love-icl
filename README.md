@@ -77,8 +77,9 @@ icl:print(player.x)
 ```
 
 The list of pre-built functions:
+	
 	help()
-	> Gives help.
+	> Gives you the list of pre-built functions.
 
 	icl:print(input, mode)
 	> Outputs input on the commandline. If mode ~= nil then icl:print() will print input at the end of the last line.
