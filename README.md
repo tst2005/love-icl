@@ -76,6 +76,13 @@ or use it for debugging
 icl:print(player.x)
 ```
 
+The list of pre-built functions:
+> help(): Gives help.
+> icl:print(input) : Outputs \"input\" on the commandline.
+> exit() : Closes this software.
+> full() : Changes console size to window size.
+> reset() : Resets size.
+
 If you have any other questions, please contract me through `sosolol261@gmail.com`. I will gladly answer your question.
 
 # Licence
