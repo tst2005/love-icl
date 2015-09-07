@@ -68,38 +68,30 @@ local lines = {}
 
 local function execute(input)
 	if input ~= "" then
-		-- Check if input() has an error. If input() has no error then exeute input() else print error message.
-		if string.find(input, "/") == 1 then
-			input = "icl:"..string.gsub(input, "/", "").."()"
-		end
-		
-		local status, err = pcall(loadstring(input))
-		
-		if status then
-			-- execute
-		else
-			icl:print(err, 1)
-		end
+		input = loadstring(input)
+		input()
 	end
 end
 
 -- commands
 
-function icl:help()
+function help()
 	icl:print("icl:print() : Outputs <input> on the commandline.")
 	icl:print("exit() : Closes this software.")
+	icl:print("full() : Changes console size to window size.")
+	icl:print("reset() : Resets size")
 end
 
-function icl:exit()
+function exit()
 	love.event.quit()
 end
 
-function icl:full()
+function full()
 	icl.w = love.window.getWidth()
 	icl.h = love.window.getHeight()
 end
 
-function icl:reset()
+function reset()
 	icl.w = 750
 	icl.h = 247
 end
@@ -150,7 +142,7 @@ function icl:load(keyAc, keyTxt, name, ver)
 
 	-- Lines
 	lines[1] = "Welcome to "..name.." v."..ver
-	lines[2] = "Enter \"/help\" to get the list of commands."
+	lines[2] = "Enter \"help()\" to get the list of commands."
 	lines[3] = self.seperator
 end
 
