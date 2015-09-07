@@ -77,11 +77,20 @@ icl:print(player.x)
 ```
 
 The list of pre-built functions:
-> help(): Gives help.
-> icl:print(input) : Outputs \"input\" on the commandline.
-> exit() : Closes this software.
-> full() : Changes console size to window size.
-> reset() : Resets size.
+	help(): 
+	> Gives help.
+
+	icl:print(input, mode)
+	> Outputs input on the commandline. If mode ~= nil then icl:print() will print input at the end of the last line.
+	
+	exit()
+	> Closes your game.
+	
+	full()
+	> Changes console size to window size.
+	
+	reset()
+	> Resets console size.
 
 CAUTION: Don't declare functions with the identical names as the ones above.
 
