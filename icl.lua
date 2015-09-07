@@ -69,7 +69,13 @@ local lines = {}
 local function execute(input)
 	if input ~= "" then
 		input = loadstring(input)
-		input()
+		local success, err = pcall(input)
+
+		if not success then
+			icl:print(err, 1)
+		else
+			-- execute
+		end
 	end
 end
 
