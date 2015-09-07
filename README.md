@@ -77,7 +77,7 @@ icl:print(player.x)
 ```
 
 The list of pre-built functions:
-	help(): 
+	help()
 	> Gives help.
 
 	icl:print(input, mode)
