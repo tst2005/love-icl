@@ -93,6 +93,15 @@ The list of pre-built functions:
 	reset()
 	> Resets console size.
 
+All these functions can be also be called in your source code. For example:
+
+```lua
+if state.debug = true then
+	icl:print("This is actually working!!")
+	icl:print("MOM GET THE CAMERAAAAAAAA11!!")
+end
+```
+
 CAUTION: Don't declare functions with the identical names as the ones above.
 
 If you have any other questions, please contract me through `sosolol261@gmail.com`. I will gladly answer your question.
